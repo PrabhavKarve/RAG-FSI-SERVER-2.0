@@ -24,7 +24,7 @@ def rag_lookup(company: str, statement_type: str, query: str, k: int = 3):
     embeddings = OpenAIEmbeddings(openai_api_key=openai_key)
 
     vectorstore = FAISS.load_local(
-        "./vectorstores/all_companies",
+        ".",
         embeddings,
         allow_dangerous_deserialization=True,
     )
