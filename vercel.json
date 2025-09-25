@@ -1,0 +1,8 @@
+{
+  "builds": [
+    { "src": "api/graphql.py", "use": "@vercel/python" }
+  ],
+  "routes": [
+    { "src": "/(.*)", "dest": "api/graphql.py" }
+  ]
+}
